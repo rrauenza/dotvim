@@ -1,0 +1,6 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhist_cnt =4
+let g:netrw_dirhist_1='/Perforce/main'
+let g:netrw_dirhist_2='/mts/home5/rich/p4clients/perforce-qa-1666/Priv/performance/perfauto/misc'
+let g:netrw_dirhist_3='/mts/home5/rich/p4clients/perforce-qa-1666/Priv/performance/perfauto/pcat_run/fixtures'
+let g:netrw_dirhist_4='/mts/home5/rich/p4clients/perforce-qa-1666/Priv/performance/perfauto/misc'
