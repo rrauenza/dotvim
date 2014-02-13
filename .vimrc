@@ -113,10 +113,12 @@ command -bar -nargs=0 -range=% TrimSpaces <line1>,<line2>call TrimSpaces()
 
 filetype on
 filetype plugin indent on
+au BufNewFile,BufRead *.djhtml set filetype=htmldjango
 
-let g:p4CmdPath = '/build/apps/bin/p4'
-let g:p4ClientRoot = '/Perforce'
-let g:p4Presets = 'P4CONFIG'
-let g:p4CurDirExpr = "(isdirectory(expand('%')) ? substitute(expand('%:p'), \ '\\\\$', '', '') : '')"
+"perforce integration
+"let g:p4CmdPath = '/build/apps/bin/p4'
+"let g:p4ClientRoot = '/Perforce'
+"let g:p4Presets = 'P4CONFIG'
+"let g:p4CurDirExpr = "(isdirectory(expand('%')) ? substitute(expand('%:p'), \ '\\\\$', '', '') : '')"
 
 
