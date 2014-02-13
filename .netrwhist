@@ -1,7 +1,0 @@
-let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =5
-let g:netrw_dirhist_1='/perfcat/pcat/pcat.git/perfauto/pcat_config/views/tests'
-let g:netrw_dirhist_2='/perfcat/pcat/pcat.git/perfauto/pcat_run/views'
-let g:netrw_dirhist_3='/perfcat/pcat/pcat.git/perfauto/pcat_config/views'
-let g:netrw_dirhist_4='/perfcat/pcat/pcat.git/perfauto/misc/tests'
-let g:netrw_dirhist_5='/perfcat/pcat/pcat.git/perfauto/pcat_run/views'
