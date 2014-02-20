@@ -122,3 +122,4 @@ au BufNewFile,BufRead *.djhtml set filetype=htmldjango
 "let g:p4CurDirExpr = "(isdirectory(expand('%')) ? substitute(expand('%:p'), \ '\\\\$', '', '') : '')"
 
 
+set viminfo='20,"10000
