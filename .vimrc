@@ -35,6 +35,9 @@ set shiftwidth=4 " auto-indent amount when using cindent,
                  " >>, << and stuff like that
 set softtabstop=4 " when hitting tab or backspace, how many spaces
                   "should a tab be (see expandtab)
+
+autocmd Filetype ruby setlocal shiftwidth=2 softtabstop=2
+
 set shiftround " when at 3 spaces, and I hit > ... go to 4, not 5
 
 set list " we do what to show tabs, to ensure we get them
