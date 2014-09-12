@@ -117,6 +117,7 @@ command -bar -nargs=0 -range=% TrimSpaces <line1>,<line2>call TrimSpaces()
 filetype on
 filetype plugin indent on
 au BufNewFile,BufRead *.djhtml set filetype=htmldjango
+au BufNewFile,BufRead *.less set filetype=css
 
 "perforce integration
 "let g:p4CmdPath = '/build/apps/bin/p4'
