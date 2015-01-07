@@ -1,6 +1,18 @@
 
-call pathogen#infect()
+execute pathogen#infect()
 
+" Syntastic
+" https://github.com/scrooloose/syntastic
+set statusline+=%#warningmsg#
+set statusline+=%{SyntasticStatuslineFlag()}
+set statusline+=%*
+
+let g:syntastic_always_populate_loc_list = 1
+let g:syntastic_auto_loc_list = 1
+let g:syntastic_check_on_open = 1
+let g:syntastic_check_on_wq = 0
+
+" Flake8
 let g:flake8_max_line_length=160
 "let g:flake8_ignore="E501,W293"
 "autocmd BufWritePost *.py call Flake8()
