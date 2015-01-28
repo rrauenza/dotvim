@@ -1,6 +1,9 @@
 
 execute pathogen#infect()
 
+set modeline
+set modelines=5
+
 " Syntastic
 " https://github.com/scrooloose/syntastic
 set statusline+=%#warningmsg#
@@ -11,9 +14,11 @@ let g:syntastic_always_populate_loc_list = 1
 let g:syntastic_auto_loc_list = 1
 let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 0
+let g:syntastic_python_flake8_args = "--max-line-length=160"
+"let g:syntastic_python_flake8_args = "--ignore=E501"
 
 " Flake8
-let g:flake8_max_line_length=160
+"let g:flake8_max_line_length=160
 "let g:flake8_ignore="E501,W293"
 "autocmd BufWritePost *.py call Flake8()
 
@@ -137,5 +142,5 @@ au BufNewFile,BufRead *.less set filetype=css
 "let g:p4Presets = 'P4CONFIG'
 "let g:p4CurDirExpr = "(isdirectory(expand('%')) ? substitute(expand('%:p'), \ '\\\\$', '', '') : '')"
 
-
 set viminfo='20,"10000
+
