@@ -15,6 +15,8 @@ let g:syntastic_auto_loc_list = 1
 let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 0
 let g:syntastic_python_flake8_args = "--max-line-length=160"
+" Ignore this in erb
+let g:syntastic_eruby_ruby_quiet_messages = {'regex': 'possibly useless use of .* in void context' }
 "let g:syntastic_python_flake8_args = "--ignore=E501"
 
 " Flake8
@@ -82,6 +84,7 @@ nnoremap <CR> :noh<CR><CR>
 "
 "autocmd BufWritePre *.h :call <SID>StripTrailingWhitespaces()
 
+highlight Search cterm=NONE ctermfg=NONE ctermbg=grey
 
 if exists('+colorcolumn')
     " add 80th column highlight
@@ -135,6 +138,7 @@ filetype on
 filetype plugin indent on
 au BufNewFile,BufRead *.djhtml set filetype=htmldjango
 au BufNewFile,BufRead *.less set filetype=css
+au BufNewFile,BufRead *.sc set filetype=python
 
 "perforce integration
 "let g:p4CmdPath = '/build/apps/bin/p4'
