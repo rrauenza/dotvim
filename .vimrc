@@ -140,6 +140,8 @@ au BufNewFile,BufRead *.djhtml set filetype=htmldjango
 au BufNewFile,BufRead *.less set filetype=css
 au BufNewFile,BufRead *.sc set filetype=python
 
+au Filetype htmldjango setlocal ts=2 sts=2 sw=2 expandtab
+
 "perforce integration
 "let g:p4CmdPath = '/build/apps/bin/p4'
 "let g:p4ClientRoot = '/Perforce'
@@ -148,3 +150,6 @@ au BufNewFile,BufRead *.sc set filetype=python
 
 set viminfo='20,"10000
 
+" http://stackoverflow.com/questions/6980749/simpler-way-to-put-pdb-breakpoints-in-python-code
+au FileType python map <silent> <leader>b oimport ipdb; ipdb.set_trace()<esc>
+au FileType python map <silent> <leader>B Oimport ipdb; ipdb.set_trace()<esc>
