@@ -139,8 +139,10 @@ filetype plugin indent on
 au BufNewFile,BufRead *.djhtml set filetype=htmldjango
 au BufNewFile,BufRead *.less set filetype=css
 au BufNewFile,BufRead *.sc set filetype=python
+au BufNewFile,BufRead *.j2html set filetype=htmljinja
 
 au Filetype htmldjango setlocal ts=2 sts=2 sw=2 expandtab
+au Filetype htmljinja setlocal ts=2 sts=2 sw=2 expandtab
 
 "perforce integration
 "let g:p4CmdPath = '/build/apps/bin/p4'
