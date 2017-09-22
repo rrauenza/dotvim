@@ -11,7 +11,7 @@ set statusline+=%{SyntasticStatuslineFlag()}
 set statusline+=%*
 
 if $VIMINIT != ''
-    let g:syntastic_javascript_jshint_exec = $VIMINIT . '/node_modules/.bin/jshint'
+    let g:syntastic_javascript_jshint_exec = '/var/tmp/.vim-rich/node_modules/.bin/jshint'
 else
     let g:syntastic_javascript_jshint_exec = $HOME. '/.vim/node_modules/.bin/jshint'
 endif
