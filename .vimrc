@@ -10,11 +10,11 @@ set statusline+=%#warningmsg#
 set statusline+=%{SyntasticStatuslineFlag()}
 set statusline+=%*
 
-if $VIMINIT != ''
+"if $VIMINIT != ''
     let g:syntastic_javascript_jshint_exec = &runtimepath . '/node_modules/.bin/jshint'
-else
-    let g:syntastic_javascript_jshint_exec = $HOME. '/.vim/node_modules/.bin/jshint'
-endif
+"else
+"    let g:syntastic_javascript_jshint_exec = $HOME. '/.vim/node_modules/.bin/jshint'
+"endif
 
 let g:syntastic_always_populate_loc_list = 1
 let g:syntastic_auto_loc_list = 1
