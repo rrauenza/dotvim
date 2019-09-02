@@ -11,9 +11,9 @@ set statusline+=%{SyntasticStatuslineFlag()}
 set statusline+=%*
 
 "if $VIMINIT != ''
-    let g:syntastic_javascript_jshint_exec = &runtimepath . '/node_modules/.bin/jshint'
+"    let g:syntastic_javascript_jshint_exec = &runtimepath . '/node_modules/.bin/jshint'
 "else
-"    let g:syntastic_javascript_jshint_exec = $HOME. '/.vim/node_modules/.bin/jshint'
+    let g:syntastic_javascript_jshint_exec = $HOME. '/.vim/node_modules/.bin/jshint'
 "endif
 
 let g:syntastic_always_populate_loc_list = 1
@@ -149,6 +149,8 @@ au BufNewFile,BufRead *.j2html set filetype=htmljinja
 
 au Filetype htmldjango setlocal ts=2 sts=2 sw=2 expandtab
 au Filetype htmljinja setlocal ts=2 sts=2 sw=2 expandtab
+au Filetype html setlocal ts=2 sts=2 sw=2 expandtab
+au Filetype typescript setlocal ts=2 sts=2 sw=2 expandtab
 
 "perforce integration
 "let g:p4CmdPath = '/build/apps/bin/p4'
