@@ -4,3 +4,9 @@
 [submodule "bundle/vim-nand2tetris-syntax"]
 	path = bundle/vim-nand2tetris-syntax
 	url = https://github.com/sevko/vim-nand2tetris-syntax.git
+[submodule "/mts/home5/rich/.vim/bundle/Vundle.vim"]
+	path = /mts/home5/rich/.vim/bundle/Vundle.vim
+	url = https://github.com/VundleVim/Vundle.vim.git
+[submodule "bundle/YouCompleteMe"]
+	path = bundle/YouCompleteMe
+	url = https://github.com/Valloric/YouCompleteMe.git

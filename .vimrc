@@ -1,5 +1,44 @@
+""""" VUNDLE
+set nocompatible              " be iMproved, required
+filetype off                  " required
 
-execute pathogen#infect()
+" set the runtime path to include Vundle and initialize
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
+" alternatively, pass a path where Vundle should install plugins
+"call vundle#begin('~/some/path/here')
+
+" let Vundle manage Vundle, required
+Plugin 'VundleVim/Vundle.vim'
+" Plugin 'psf/black'
+Plugin 'scrooloose/syntastic'
+Plugin 'rjr'
+" Plugin 'YouCompleteMe'
+
+" The following are examples of different formats supported.
+" Keep Plugin commands between vundle#begin/end.
+" plugin on GitHub repo
+" Plugin 'tpope/vim-fugitive'
+" plugin from http://vim-scripts.org/vim/scripts.html
+" Plugin 'L9'
+" Git plugin not hosted on GitHub
+" Plugin 'git://git.wincent.com/command-t.git'
+" git repos on your local machine (i.e. when working on your own plugin)
+" Plugin 'file:///home/gmarik/path/to/plugin'
+" The sparkup vim script is in a subdirectory of this repo called vim.
+" Pass the path to set the runtimepath properly.
+" Plugin 'rstacruz/sparkup', {'rtp': 'vim/'}
+" Install L9 and avoid a Naming conflict if you've already installed a
+" different version somewhere else.
+" Plugin 'ascenator/L9', {'name': 'newL9'}
+
+" All of your Plugins must be added before the following line
+call vundle#end()            " required
+filetype plugin indent on    " required
+""""" VUNDLE
+
+
+" execute pathogen#infect()
 
 set modeline
 set modelines=5
@@ -71,9 +110,9 @@ set listchars=tab:>-,trail:- " show tabs and trailing
 
 set ruler
 
-map <f10> :make<cr>
-map <f11> :cnext<cr>
-map <f12> :cprevious<cr>
+" map <f10> :make<cr>
+" map <f11> :cnext<cr>
+" map <f12> :cprevious<cr>
 
 "This unsets the "last search pattern" register by hitting return
 nnoremap <CR> :noh<CR><CR>
@@ -94,7 +133,7 @@ highlight Search cterm=NONE ctermfg=NONE ctermbg=grey
 
 if exists('+colorcolumn')
     " add 80th column highlight
-    set colorcolumn=80
+    set colorcolumn=90
     hi colorcolumn ctermbg=darkred
 else
     " Highlight text over 80 characters
@@ -163,3 +202,4 @@ set viminfo='20,"10000
 " http://stackoverflow.com/questions/6980749/simpler-way-to-put-pdb-breakpoints-in-python-code
 au FileType python map <silent> <leader>b oimport ipdb; ipdb.set_trace()<esc>
 au FileType python map <silent> <leader>B Oimport ipdb; ipdb.set_trace()<esc>
+au FileType python map <f10> :%! black -q -<cr>
